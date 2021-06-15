@@ -5,8 +5,8 @@ name: joy挂机
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '25 4,14 * * *'
+  #schedule:
+    #- cron: '25 4,14 * * *'
   
   watch:
     types: started
@@ -20,7 +20,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        
+        with:
+          repository: inoyna111/jd28        
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
@@ -37,13 +38,7 @@ jobs:
           npm install
       - name: '运行 【jd_crazy_joy_coin】'
         run: |
-          random_time=$(($RANDOM % 2))
-          echo "等待 ${random_time} 分钟后开始执行"
-          for((i=1; i<=${random_time}; i++));  
-          do
-            echo "倒计时 $[${random_time}-$i] 分钟"
-            sleep 1m
-          done
+          
           node jd_crazy_joy_coin.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
