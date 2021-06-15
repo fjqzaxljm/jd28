@@ -25,11 +25,9 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【京东取关商品/新品试用】'
+      - name: '运行 【新品试用】'
         run: |
-      
-          #node jd_unsubscribe.js
-          #sleep 10
+   
           node jd_try.js
           
           
