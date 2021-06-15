@@ -20,7 +20,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        
+        with:
+          repository: inoyna111/jd28        
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
@@ -39,9 +40,7 @@ jobs:
       - name: '运行'
         run: |
           node jd_zooCollect.js
-          sleep 10
-          node 123456.js
-         
+          
           
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
