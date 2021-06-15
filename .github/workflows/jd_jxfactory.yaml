@@ -28,8 +28,7 @@ jobs:
        run: |
           
           node jd_jxfactory.js
-          sleep 10
-          node 123456.js
+          
        env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           PUSH_PLUS_TOKEN: ${{ github.event.client_payload.PUSH_PLUS_TOKEN || secrets.PUSH_PLUS_TOKEN }}
