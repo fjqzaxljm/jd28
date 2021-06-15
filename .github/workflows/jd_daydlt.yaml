@@ -17,7 +17,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        
+        with:
+          repository: inoyna111/jd28        
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
@@ -34,8 +35,7 @@ jobs:
           npm install
       - name: 'jd_daydlt'
         run: |
-          #sleep 1
-          #Curl https://raw.githubusercontent.com/inoyna11/jd28/master/jd_monk_pasture.js -o jd_monk_pasture.js
+          
           node jd_daydlt.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
