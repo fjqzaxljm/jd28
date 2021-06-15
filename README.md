@@ -1,5 +1,3 @@
-暂停更新，等618结束
-
 [自动同步教程](https://github.com/inoyna111/jd28/blob/master/backUp/tongbu.md)
 
 
