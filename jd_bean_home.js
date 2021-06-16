@@ -1,5 +1,5 @@
 /*
-领京豆额外奖励&抢京豆
+领京豆额外奖励&抢京豆1
 脚本自带助力码，介意者可将 29行 helpAuthor 变量设置为 false
 活动入口：京东APP首页-领京豆
 更新地址：https://gitee.com/lxk0301/jd_scripts/raw/master/jd_bean_home.js
