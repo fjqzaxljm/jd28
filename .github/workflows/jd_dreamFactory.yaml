@@ -8,7 +8,7 @@ on:
   schedule:
     - cron: '40 0-23/1 * * *'
   repository_dispatch:
-    types: jd_jxfactory
+    types: jd_dreamFactory
 jobs:
   build:
 
@@ -24,10 +24,10 @@ jobs:
      - name: npm install
        run: |
           npm install
-     - name: 'jd_jxfactory'
+     - name: '京喜工厂'
        run: |
           
-          node jd_jxfactory.js
+          node jd_dreamFactory.js
           
        env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
